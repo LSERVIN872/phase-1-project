@@ -20,4 +20,14 @@ function setHoverText() {
       tile.classList.remove("x-hover");
       tile.classList.remove("o-hover");
     });
-  
+    const hoverClass = `${turn.toLowerCase()}-hover`;
+
+  tiles.forEach((tile) => {
+    if (tile.innerText == "") {
+      tile.classList.add(hoverClass);
+    }
+  });
+}
+
+setHoverText();
+
