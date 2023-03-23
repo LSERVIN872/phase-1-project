@@ -7,5 +7,5 @@ const boardState = Array(tiles.length);
 boardState.fill(null);
 
 const strike = document.getElementById("strike");
-const gameOverArea = 
-document.getElementById("game-over-area");
+const gameOverArea = document.getElementById("game-over-area");
+const gameOverText = document.getElementById("game-over-text");
