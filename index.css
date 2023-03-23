@@ -92,3 +92,33 @@ s
     transform: skewY(-45deg);
   }
 
+  h2 {
+    color: currentColor;
+    font-size: 2em;
+    margin-top: 0px;
+  }
+  
+  button {
+    background-color: transparent;
+    color: currentColor;
+    border: currentColor 1px solid;
+    padding: 10px;
+    font-size: 1.5em;
+  }
+  .hidden {
+    display: none;
+  }
+  
+  .visible {
+    display: block;
+  }
+  
+  .x-hover:hover::after {
+    content: "X";
+    opacity: 0.4;
+  }
+  
+  .o-hover:hover::after {
+    content: "O";
+    opacity: 0.4;
+  }
