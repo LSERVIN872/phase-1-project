@@ -84,7 +84,7 @@ function checkWinner() {
     }
     gameOverArea.className = "visible";
     gameOverText.innerText = text;
-    gameOverSound.play();
+  
   }
   
   function startNewGame() {
