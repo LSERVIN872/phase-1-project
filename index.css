@@ -25,3 +25,18 @@ body {
   .right-border {
     border-right: 0.2em solid indigo;
   }
+  .bottom-border {
+    border-bottom: 0.2em solid indigo;
+  }
+  
+  h1 {
+    color: currentColor;
+  }
+  
+  #game-over-area {
+    text-align: center;
+    border: indigo 8px solid;
+    padding: 50px;
+    width: 50%;
+    margin-top: 50px;
+  }
