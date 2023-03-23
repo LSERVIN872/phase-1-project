@@ -12,3 +12,12 @@ const gameOverText = document.getElementById("game-over-text");
 
 const playAgain = document.getElementById("play-again");
 playAgain.addEventListener("click", startNewGame);
+
+tiles.forEach((tile) => tile.addEventListener("click", tileClick));
+
+function setHoverText() {
+    tiles.forEach((tile) => {
+      tile.classList.remove("x-hover");
+      tile.classList.remove("o-hover");
+    });
+  
