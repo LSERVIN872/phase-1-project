@@ -28,7 +28,7 @@ body {
   .bottom-border {
     border-bottom: 0.2em solid blue;
   }
-
+s
   h1 {
     color: currentColor;
   }
@@ -39,4 +39,15 @@ body {
     padding: 50px;
     width: 50%;
     margin-top: 50px;
+  }
+
+  .strike {
+    position: absolute;
+    background-color: darkred;
+  }
+  
+  .strike-row-1 {
+    width: 100%;
+    height: 4px;
+    top: 15%;
   }
