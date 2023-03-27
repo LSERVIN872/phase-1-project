@@ -10,8 +10,8 @@ const strike = document.getElementById("strike");
 const gameOverArea = document.getElementById("game-over-area");
 const gameOverText = document.getElementById("game-over-text");
 
-const playAgain = document.getElementById("play-again");
-playAgain.addEventListener("click", startNewGame);
+const playAgain = document.getElementById("Down-arrow-to-play-again");
+playAgain.addEventListener("keydown", startNewGame);
 
 tiles.forEach((tile) => tile.addEventListener("click", tileClick));
 
@@ -109,5 +109,3 @@ function checkWinner() {
     { combo: [1, 5, 9], strikeClass: "strike-diagonal-1" },
     { combo: [3, 5, 7], strikeClass: "strike-diagonal-2" },]
   
-
-

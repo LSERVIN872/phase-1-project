@@ -122,3 +122,12 @@ body {
     content: "O";
     opacity: 0.4;
   }
+
+  *{
+    font-family: 'Marcellus SC', serif;
+    font-weight: 200;
+    margin: 0;
+    padding:  0;
+    text-align: center;
+  }
+  
