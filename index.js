@@ -3,6 +3,43 @@ const PLAYER_X = "X";
 const PLAYER_O = "O";
 let turn = PLAYER_X;
 
+const playerForm = document.querySelector('.playercard')
+
+function getPlayer() {
+  return fetch('http://localhost:3000')
+    .then(res => res.json())
+}
+
+function postPlayer(player_data) {
+  fetch('http://localhost:3000/players', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: "application/json"
+      },
+      body: JSON.stringify({
+        "name": player_data.name.value,
+        "image": player_data.image.value,
+        "likes": 0
+
+      })
+    })}
+
+  function renderPlayers(players) {
+  let h2 = document.createElement('h2')
+  h2.innerText = players.name
+
+  let img = document.createElement('img')
+  img.setAttribute('src', players.image)
+  img.setAttribute('class', 'player-avatar')
+
+  let divCard = document.createElement('div')
+  divCard.setAttribute('class', 'card')
+  divCard.append(h2, img, p, btn)
+  divCollect.append(divCard)
+}
+  
+
 const boardState = Array(tiles.length);
 boardState.fill(null);
 
