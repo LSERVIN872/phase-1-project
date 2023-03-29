@@ -6,24 +6,13 @@ let turn = PLAYER_X;
 const playerForm = document.querySelector('.playercard')
 
 function getPlayer() {
-  return fetch('http://localhost:3000')
+  return fetch('http://localhost:3000/players')
     .then(res => res.json())
+    .then(data => document.getElementById('ten').src = data[0].image)
 }
 
-function postPlayer(player_data) {
-  fetch('http://localhost:3000/players', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: "application/json"
-      },
-      body: JSON.stringify({
-        "name": player_data.name.value,
-        "image": player_data.image.value,
-        "likes": 0
+getPlayer()
 
-      })
-    })}
 
   function renderPlayers(players) {
   let h2 = document.createElement('h2')
