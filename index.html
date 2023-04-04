@@ -9,7 +9,54 @@
   </head>
   <body>
     <h1>Luis Servin's Tic Tac Toe</h1>
-    <img id="ten"> </img>
+  <Div>
+    <h2>player1</h2>
+    <img id="player1" width="200" top="100" left="300" height="200">
+    <p onclick="player1()" id="one"></p>
+    <h1 id="num"></h1>
+      <div class="btns">
+      <button id="plus">+1</button>
+      <button onclick="check()" id="minus">-1</button>
+  </div>
+<div>
+    <h3>player2</h3>
+    <img id="player2" width="200" top="0" left="300" height="200">
+    <p onclick="player2()" id="team"></p>
+    <h1 id="num2"></h1>
+    <div class="btns">
+      <button id="plus">+1</button>
+      <button onclick="check()" id="minus">-1</button>
+</div>
+<div>
+    <h4>player3</h4>
+    <img id="player3" width="200" top="0" left="300" height="200">
+    <p onclick="teamname()" id="team"></p>
+    <h1 id="num3"></h1>
+    <div class="btns">
+      <button id="plus">+1</button>
+      <button onclick="check()" id="minus">-1</button>
+    </div>
+  <div>
+    <h5>player4</h5>
+    <img id="player4" width="200" top="0" left="300" height="200">
+    <p onclick="teamname()" id="team"></p>
+    <h1 id="num4"></h1>
+    <div class="btns">
+      <button id="plus">+1</button>
+      <button onclick="check()" id="minus">-1</button>
+    </div>
+  <div>
+    <h6>player5</h6>
+    <img id="player5" width="200" top="0" left="300" height="200">
+    <p onclick="teamname()" id="team"></p>
+    <h1 id="num5"></h1>
+    <div class="btns">
+      <button id="plus">+1</button>
+      <button onclick="check()" id="minus">-1</button>
+    </div>
+  </Div>
+  
+
     <div id="board">
       <div data-index="1" class="tile right-border bottom-border"></div>
       <div data-index="2" class="tile right-border bottom-border"></div>
@@ -23,7 +70,7 @@
       <div id="strike" class="strike"></div>
     </div>
     <div id="game-over-area" class="hidden">
-      <h2 id="game-over-text">Winner is X</h2>
+      <h7 id="game-over-text">Winner is X</h7>
       <button id="Down-arrow-to-play-again">Press Down Arrow to Play Again</button>
     </div>
     <script src="index.js"></script>

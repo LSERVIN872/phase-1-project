@@ -5,29 +5,80 @@ let turn = PLAYER_X;
 
 const playerForm = document.querySelector('.playercard')
 
-function getPlayer() {
+function getPlayer1() {
   return fetch('http://localhost:3000/players')
     .then(res => res.json())
-    .then(data => document.getElementById('ten').src = data[0].image)
+    .then(data => document.getElementById('player1').src = data[0].image)
 }
 
-getPlayer()
+getPlayer1()
 
-
-  function renderPlayers(players) {
-  let h2 = document.createElement('h2')
-  h2.innerText = players.name
-
-  let img = document.createElement('img')
-  img.setAttribute('src', players.image)
-  img.setAttribute('class', 'player-avatar')
-
-  let divCard = document.createElement('div')
-  divCard.setAttribute('class', 'card')
-  divCard.append(h2, img, p, btn)
-  divCollect.append(divCard)
+function getPlayer2() {
+  return fetch('http://localhost:3000/players')
+    .then(res => res.json())
+    .then(data => document.getElementById('player2').src = data[1].image)
 }
-  
+getPlayer2()
+
+function getPlayer3() {
+  return fetch('http://localhost:3000/players')
+    .then(res => res.json())
+    .then(data => document.getElementById('player3').src = data[2].image)
+}
+getPlayer3()
+
+function getPlayer4() {
+  return fetch('http://localhost:3000/players')
+    .then(res => res.json())
+    .then(data => document.getElementById('player4').src = data[3].image)
+}
+getPlayer4()
+
+function getPlayer5() {
+  return fetch('http://localhost:3000/players')
+    .then(res => res.json())
+    .then(data => document.getElementById('player5').src = data[4].image)
+}
+getPlayer5()
+
+//score board
+let score = 0,
+    display = document.getElementById('num');
+
+let plus = document.getElementById('plus'),
+    minus = document.getElementById('minus'),
+    player1 = document.getElementById('player1');
+    player2 = document.getElementById('player2');
+
+display.innerText = score;
+
+plus.addEventListener('click', function(){
+  score++;
+  display.innerText = score;
+  enabled();
+});
+
+minus.addEventListener('click', function(){
+  score--;
+  display.innerText = score;
+});
+
+function check() {
+  if(score <= 1) {
+    score = 1;
+    display.innerText = score;
+    disabled();
+  };
+};
+
+function disabled() {
+  minus.disabled = true;
+};
+
+function enabled() {
+  minus.disabled = false;
+};
+//Score Board end
 
 const boardState = Array(tiles.length);
 boardState.fill(null);

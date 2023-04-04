@@ -28,15 +28,12 @@ body {
   .bottom-border {
     border-bottom: 0.2em solid blue;
   }
-
-  h1 {
-    color: currentColor;
-  }
+ 
   
   #game-over-area {
     text-align: center;
     border: blue 8px solid;
-    padding: 50px;
+    padding: 100px;
     width: 50%;
     margin-top: 50px;
   }
@@ -92,7 +89,7 @@ body {
     transform: skewY(-45deg);
   }
 
-  h2 {
+  h7{
     color: currentColor;
     font-size: 2em;
     margin-top: 0px;
@@ -178,19 +175,6 @@ body {
     color: #e04b52;
   }
   
-  .container {
-    padding: 1rem;
-    width: stretch;
-    height: auto;
-    display: none;
-    background: #515DA2;
-    opacity: .8;
-  }
-  
-  .add-toy-form {
-    width: 80%
-  }
-  
   .submit {
     position: relative;
     background-color: #e04b52;
@@ -219,16 +203,79 @@ body {
     font-family: monospace;
     margin: 3px;
   }
+#player1{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+#player2{
+  position: absolute;
+  top: 220px;
+  left: 16px;
+  font-size: 18px;
+}
+#player3{
+  position: absolute;
+  top: 440px;
+  left: 16px;
+  font-size: 18px;
+}
 
-  .playercard {
-    text-align: left;
-    border: grey solid 1px;
-    padding: 1rem;
-    width: 15rem;
-    height: 25rem;
-    display: inline-grid;
-    margin: 1rem 2rem;
-    box-shadow: 3px 4px #e04b52
-  }
+#player4{
+  position: absolute;
+  top: 660px;
+  left: 16px;
+  font-size: 18px;
+}
+#player5{
+  position: absolute;
+  top: 880px;
+  left: 16px;
+  font-size: 18px;
+}
+#minus{
+  position: relative;
+  top: 100px;
+  left: -450px;
+  font-size: 18px;
+}
+#plus{
+  position: relative;
+  top: 100px;
+  left: -500px;
+  font-size: 18px;
+}
+#num{
+  position: relative;
+  top: 20px;
+  left: -450px;
+  font-size: 18px;
+}
+
+h2{  position: relative;
+  top: 20px;
+  left: -450px;
+  font-size: 18px;}
+
+h3{  position: relative;
+  top: 100px;
+  left: -450px;
+  font-size: 18px;}
+
+h4{  position: relative;
+    top: 100px;
+    left: -450px;
+    font-size: 18px;}
   
-  
+h5{  position: relative;
+      top: 100px;
+      left: -450px;
+      font-size: 18px;}
+
+h6{  position: relative;
+        top: 100px;
+        left: -450px;
+        font-size: 18px;}
+      
+    
