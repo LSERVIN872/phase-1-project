@@ -5,41 +5,17 @@ let turn = PLAYER_X;
 
 const playerForm = document.querySelector('.playercard')
 
-function getPlayer1() {
-  return fetch('http://localhost:3000/players')
-  .then(res => res.json())
-    .then(data => document.getElementById('player1').src = data[0].image)
-}
-
-getPlayer1()
-
-function getPlayer2() {
+function getPlayer(player, index) {
   return fetch('http://localhost:3000/players')
     .then(res => res.json())
-    .then(data => document.getElementById('player2').src = data[1].image)
+    .then(data => document.getElementById(player).src = data[index].image)
 }
-getPlayer2()
 
-function getPlayer3() {
-  return fetch('http://localhost:3000/players')
-    .then(res => res.json())
-    .then(data => document.getElementById('player3').src = data[2].image)
-}
-getPlayer3()
-
-function getPlayer4() {
-  return fetch('http://localhost:3000/players')
-    .then(res => res.json())
-    .then(data => document.getElementById('player4').src = data[3].image)
-}
-getPlayer4()
-
-function getPlayer5() {
-  return fetch('http://localhost:3000/players')
-    .then(res => res.json())
-    .then(data => document.getElementById('player5').src = data[4].image)
-}
-getPlayer5()
+getPlayer('player1', 0)
+getPlayer('player2', 1)
+getPlayer('player3', 2)
+getPlayer('player4', 3)
+getPlayer('player5', 4)
 
 
 //score board
