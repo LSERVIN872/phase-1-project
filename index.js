@@ -9,14 +9,37 @@ function getPlayer1() {
   return fetch('http://localhost:3000/players')
   .then(res => res.json())
     .then(data => document.getElementById('player1').src = data[0].image)
-    .then(data => document.getElementById('player2').src = data[1].image)
-    .then(data => document.getElementById('player3').src = data[2].image)
-    .then(data => document.getElementById('player4').src = data[3].image)
-    .then(data => document.getElementById('player5').src = data[4].image)
-
 }
 
 getPlayer1()
+
+function getPlayer2() {
+  return fetch('http://localhost:3000/players')
+    .then(res => res.json())
+    .then(data => document.getElementById('player2').src = data[1].image)
+}
+getPlayer2()
+
+function getPlayer3() {
+  return fetch('http://localhost:3000/players')
+    .then(res => res.json())
+    .then(data => document.getElementById('player3').src = data[2].image)
+}
+getPlayer3()
+
+function getPlayer4() {
+  return fetch('http://localhost:3000/players')
+    .then(res => res.json())
+    .then(data => document.getElementById('player4').src = data[3].image)
+}
+getPlayer4()
+
+function getPlayer5() {
+  return fetch('http://localhost:3000/players')
+    .then(res => res.json())
+    .then(data => document.getElementById('player5').src = data[4].image)
+}
+getPlayer5()
 
 
 //score board
