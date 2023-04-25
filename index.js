@@ -5,17 +5,14 @@ let turn = PLAYER_X;
 
 const playerForm = document.querySelector('.playercard')
 
-function getPlayer(player, index) {
+function getPlayer() {
   return fetch('http://localhost:3000/players')
     .then(res => res.json())
-    .then(data => document.getElementById(player).src = data[index].image)
+    .then(data =>data.forEach(d=>{console.log(d.aliasname);
+      document.getElementById(d.aliasname).src = data[d.id-1].image}))
 }
 
-getPlayer('player1', 0)
-getPlayer('player2', 1)
-getPlayer('player3', 2)
-getPlayer('player4', 3)
-getPlayer('player5', 4)
+getPlayer()
 
 
 //score board
@@ -106,6 +103,7 @@ function tileClick(event) {
   setHoverText();
   checkWinner();
 }
+
 function checkWinner() {
     
     for (const winningCombination of winningCombinations) {
@@ -162,4 +160,15 @@ function checkWinner() {
     
     { combo: [1, 5, 9], strikeClass: "strike-diagonal-1" },
     { combo: [3, 5, 7], strikeClass: "strike-diagonal-2" },]
-  
+//Event Listner
+
+const form = document.getElementById("Cheat Code");
+
+form.addEventListener("focusin", (event) => {
+ event.target.style.background = "pink";
+});
+    
+form.addEventListener("focusout", (event) => {
+   event.target.style.background = "";
+ });
+ //End Event Listner
